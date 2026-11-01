@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/JS/bootstrap.bundle.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <style>
+
+        /* Account Navbar */
+
+        .account-navbar {
+            background: linear-gradient(135deg, #dc3545, #842029);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+            .account-navbar .navbar-brand {
+                font-size: 22px;
+                font-weight: 700;
+                color: #ffffff;
+            }
+
+                .account-navbar .navbar-brand i {
+                    margin-right: 8px;
+                }
+
+            .account-navbar .nav-link {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 14px;
+                font-weight: 500;
+                padding: 10px 12px !important;
+                border-radius: 6px;
+                transition: 0.3s;
+            }
+
+                .account-navbar .nav-link:hover,
+                .account-navbar .nav-link.active {
+                    background: rgba(255, 255, 255, 0.18);
+                    color: #ffffff;
+                }
+
+                .account-navbar .nav-link i {
+                    margin-right: 5px;
+                }
+
+            .account-navbar .navbar-toggler {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .account-navbar .navbar-toggler-icon {
+                filter: brightness(0) invert(1);
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Account Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark account-navbar">
+
+        <div class="container-fluid px-4">
+
+            <!-- Brand -->
+            <a class="navbar-brand"
+               href="@Url.Action("Index", "Account")">
+
+                <i class="bi bi-person-lock"></i>
+                Account Portal
+
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#accountNavbar"
+                    aria-controls="accountNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="accountNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Index", "Account")">
+
+                            <i class="bi bi-house-door"></i>
+                            Dashboard
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Login", "Account")">
+
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Login
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Register", "Account")">
+
+                            <i class="bi bi-person-plus"></i>
+                            Register
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("ForgotPassword", "Account")">
+
+                            <i class="bi bi-question-circle"></i>
+                            Forgot Password
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("ResetPassword", "Account")">
+
+                            <i class="bi bi-arrow-repeat"></i>
+                            Reset Password
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("ChangePassword", "Account")">
+
+                            <i class="bi bi-key"></i>
+                            Change Password
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("MyProfile", "Account")">
+
+                            <i class="bi bi-person-circle"></i>
+                            My Profile
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("EditProfile", "Account")">
+
+                            <i class="bi bi-pencil-square"></i>
+                            Edit Profile
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Settings", "Account")">
+
+                            <i class="bi bi-gear"></i>
+                            Settings
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Logout", "Account")">
+
+                            <i class="bi bi-box-arrow-right"></i>
+                            Logout
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

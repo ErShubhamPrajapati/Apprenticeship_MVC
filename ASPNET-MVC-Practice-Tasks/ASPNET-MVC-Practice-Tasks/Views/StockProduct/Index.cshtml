@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string[] Name = { "Laptop", "Mobile", "Keyboard", "Mouse", "Monitor", "Printer", "Headphone", "Tablet", "Speaker", "Webcam" };
+    int[] Stock = { 10, 0, 15, 0, 8, 5, 0, 20, 12, 0 };
+    <div class=" container">
+        <h2 class="text-center mb-4">Product Stock Details</h2>
+    </div>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Product Name</th>
+                <th>Stock Quantity</th>
+                <th>Stock Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(int i=0; i<Name.Length; i++)
+            {
+                <tr>
+                    <td>@Name[i]</td>
+                    <td>@Stock[i]</td>
+                    <td>
+                        @if (Stock[i] > 0)
+                {
+                    <span class="text-success">Available stock</span>
+                }
+else
+                {
+                    <span class="text-danger">Out Of Stock</span>
+                }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

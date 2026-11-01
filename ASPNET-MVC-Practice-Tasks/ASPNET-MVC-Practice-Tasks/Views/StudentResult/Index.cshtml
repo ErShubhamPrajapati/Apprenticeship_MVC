@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string[] Name = { "Shubham", "Rahul", "Amit", "Priya", "Rohit", "Neha", "Ankit", "Pooja", "Vikas", "Anshika" };
+    int[] Marks = { 85, 30, 65, 25, 45, 90, 32, 70, 33, 80 };
+    <h2>Student Result</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Result</th>
+        </tr>
+        @for (int i = 0; i < Name.Length; i++)
+        {
+            <tr>
+                <td>@(i+1)</td>
+                <td>@Name[i]</td>
+                <td>@Marks[i]</td>
+
+                @if (Marks[i] >= 33)
+                {
+                <td>Pass</td>
+                }
+                else
+                {
+                <td>Fail</td>
+                }
+            </tr>
+        }
+
+    </table>
+
+
+}
+

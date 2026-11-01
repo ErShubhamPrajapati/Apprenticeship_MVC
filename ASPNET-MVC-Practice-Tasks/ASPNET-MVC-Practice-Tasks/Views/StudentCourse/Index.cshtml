@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{ 
+    string[] Name ={"Rahul", "Amit", "Priya", "Neha", "Rohit","Pooja", "Ankit", "Sneha", "Vikas", "Kiran"};
+    int[] RollNo ={101, 102, 103, 104, 105,106, 107, 108, 109, 110};
+    string[] Course ={"CSE", "IT", "CSE", "Mechanical", "IT","Civil", "CSE", "Mechanical", "Civil", "IT"};
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Student Course Details</h2>
+        <div class="row mb-4">
+
+            <div class="col-md-4">
+
+                <label>Select Course</label>
+
+                <select class="form-control">
+
+                    <option value="All">All Courses</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+
+                </select>
+
+            </div>
+            <table class="table table-bordered mt-4">
+                <thead class=" table-dark">
+                    <tr>
+                        <th>Roll Number</th>
+                        <th>Student Name</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(int i = 0; i < Name.Length; i++)
+            {
+                <tr>
+                    <td>@Name[i]</td>
+                    <td>@RollNo[i]</td>
+                    <td>@Course[i]</td>
+                </tr>
+            }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+}
+
+

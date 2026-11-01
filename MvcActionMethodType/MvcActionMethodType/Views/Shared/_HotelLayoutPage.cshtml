@@ -1,0 +1,220 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/JS/bootstrap.bundle.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet" />
+
+    <style>
+
+        .hotel-navbar {
+            background: linear-gradient(135deg, #198754, #146c43);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+            .hotel-navbar .navbar-brand {
+                font-size: 22px;
+                font-weight: 700;
+                color: #ffffff;
+            }
+
+                .hotel-navbar .navbar-brand i {
+                    margin-right: 8px;
+                }
+
+            .hotel-navbar .nav-link {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 14px;
+                font-weight: 500;
+                padding: 10px 12px !important;
+                border-radius: 6px;
+                transition: 0.3s;
+            }
+
+                .hotel-navbar .nav-link:hover,
+                .hotel-navbar .nav-link.active {
+                    background: rgba(255, 255, 255, 0.18);
+                    color: #ffffff;
+                }
+
+                .hotel-navbar .nav-link i {
+                    margin-right: 5px;
+                }
+
+            .hotel-navbar .navbar-toggler {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .hotel-navbar .navbar-toggler-icon {
+                filter: brightness(0) invert(1);
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Hotel Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark hotel-navbar">
+
+        <div class="container-fluid px-4">
+
+            <!-- Brand -->
+            <a class="navbar-brand"
+               href="@Url.Action("Index", "Hotel")">
+
+                <i class="bi bi-building"></i>
+                Hotel Management
+
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#hotelNavbar"
+                    aria-controls="hotelNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="hotelNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- 1. Index -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Index", "Hotel")">
+
+                            <i class="bi bi-house-door"></i>
+                            Home
+
+                        </a>
+                    </li>
+
+                    <!-- 2. About -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("About", "Hotel")">
+
+                            <i class="bi bi-info-circle"></i>
+                            About
+
+                        </a>
+                    </li>
+
+                    <!-- 3. Rooms -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Rooms", "Hotel")">
+
+                            <i class="bi bi-door-open"></i>
+                            Rooms
+
+                        </a>
+                    </li>
+
+                    <!-- 4. RoomDetails -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("RoomDetails", "Hotel")">
+
+                            <i class="bi bi-card-list"></i>
+                            Room Details
+
+                        </a>
+                    </li>
+
+                    <!-- 5. Booking -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Booking", "Hotel")">
+
+                            <i class="bi bi-calendar-plus"></i>
+                            Booking
+
+                        </a>
+                    </li>
+
+                    <!-- 6. Reservations -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Reservations", "Hotel")">
+
+                            <i class="bi bi-calendar-check"></i>
+                            Reservations
+
+                        </a>
+                    </li>
+
+                    <!-- 7. Restaurant -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Restaurant", "Hotel")">
+
+                            <i class="bi bi-cup-hot"></i>
+                            Restaurant
+
+                        </a>
+                    </li>
+
+                    <!-- 8. Facilities -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Facilities", "Hotel")">
+
+                            <i class="bi bi-stars"></i>
+                            Facilities
+
+                        </a>
+                    </li>
+
+                    <!-- 9. Offers -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Offers", "Hotel")">
+
+                            <i class="bi bi-tag"></i>
+                            Offers
+
+                        </a>
+                    </li>
+
+                    <!-- 10. Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Contact", "Hotel")">
+
+                            <i class="bi bi-telephone"></i>
+                            Contact
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- View Content -->
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

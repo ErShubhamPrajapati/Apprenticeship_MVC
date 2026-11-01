@@ -1,0 +1,220 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/JS/bootstrap.bundle.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet" />
+
+    <style>
+
+        .college-navbar {
+            background: linear-gradient(135deg, #198754, #146c43);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+            .college-navbar .navbar-brand {
+                font-size: 22px;
+                font-weight: 700;
+                color: #ffffff;
+            }
+
+                .college-navbar .navbar-brand i {
+                    margin-right: 8px;
+                }
+
+            .college-navbar .nav-link {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 14px;
+                font-weight: 500;
+                padding: 10px 12px !important;
+                border-radius: 6px;
+                transition: 0.3s;
+            }
+
+                .college-navbar .nav-link:hover,
+                .college-navbar .nav-link.active {
+                    background: rgba(255, 255, 255, 0.18);
+                    color: #ffffff;
+                }
+
+                .college-navbar .nav-link i {
+                    margin-right: 5px;
+                }
+
+            .college-navbar .navbar-toggler {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .college-navbar .navbar-toggler-icon {
+                filter: brightness(0) invert(1);
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- College Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark college-navbar">
+
+        <div class="container-fluid px-4">
+
+            <!-- Brand -->
+            <a class="navbar-brand"
+               href="@Url.Action("Index", "College")">
+
+                <i class="bi bi-mortarboard-fill"></i>
+                College Management
+
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collegeNavbar"
+                    aria-controls="collegeNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="collegeNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- 1. Index -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Index", "College")">
+
+                            <i class="bi bi-house-door"></i>
+                            Dashboard
+
+                        </a>
+                    </li>
+
+                    <!-- 2. About -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("About", "College")">
+
+                            <i class="bi bi-info-circle"></i>
+                            About
+
+                        </a>
+                    </li>
+
+                    <!-- 3. Courses -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Courses", "College")">
+
+                            <i class="bi bi-book"></i>
+                            Courses
+
+                        </a>
+                    </li>
+
+                    <!-- 4. Departments -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Departments", "College")">
+
+                            <i class="bi bi-building"></i>
+                            Departments
+
+                        </a>
+                    </li>
+
+                    <!-- 5. Faculty -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Faculty", "College")">
+
+                            <i class="bi bi-person-badge"></i>
+                            Faculty
+
+                        </a>
+                    </li>
+
+                    <!-- 6. Admissions -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Admissions", "College")">
+
+                            <i class="bi bi-person-plus"></i>
+                            Admissions
+
+                        </a>
+                    </li>
+
+                    <!-- 7. Students -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Students", "College")">
+
+                            <i class="bi bi-people"></i>
+                            Students
+
+                        </a>
+                    </li>
+
+                    <!-- 8. Examinations -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Examinations", "College")">
+
+                            <i class="bi bi-journal-check"></i>
+                            Examinations
+
+                        </a>
+                    </li>
+
+                    <!-- 9. Results -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Results", "College")">
+
+                            <i class="bi bi-clipboard-data"></i>
+                            Results
+
+                        </a>
+                    </li>
+
+                    <!-- 10. Placements -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="@Url.Action("Placements", "College")">
+
+                            <i class="bi bi-briefcase"></i>
+                            Placements
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- View Content -->
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

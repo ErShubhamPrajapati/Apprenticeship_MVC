@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_AllLayoutPage.cshtml";
+}
+<div class="card shadow-sm border-0 p-4">
+
+    <h4 class="text-primary mb-4">Contact Form</h4>
+
+    <form  method="post">
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Name</label>
+            <input type="text" name="name"
+                   class="form-control"
+                   placeholder="Enter your name" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Mobile Number</label>
+            <input type="tel" name="mobile"
+                   class="form-control"
+                   placeholder="Enter mobile number" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Email ID</label>
+            <input type="email" name="email"
+                   class="form-control"
+                   placeholder="Enter your email" required />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-semibold">Message</label>
+            <textarea name="message"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Write your message..."
+                      required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary px-4">
+            Submit Message
+        </button>
+
+    </form>
+
+</div>

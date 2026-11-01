@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37628.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET-MVC-10-Forms-Task", "ASP.NET-MVC-10-Forms-Task\ASP.NET-MVC-10-Forms-Task.csproj", "{97FF98EB-D800-4B2C-8C0E-46C5C5A78B4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FF98EB-D800-4B2C-8C0E-46C5C5A78B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FF98EB-D800-4B2C-8C0E-46C5C5A78B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FF98EB-D800-4B2C-8C0E-46C5C5A78B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FF98EB-D800-4B2C-8C0E-46C5C5A78B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01996C32-F403-4C8C-A0ED-3E9B294E485D}
+	EndGlobalSection
+EndGlobal

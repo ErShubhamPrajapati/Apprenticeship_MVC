@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Address";
+    Layout = "~/Views/Shared/_AllLayoutPage.cshtml";
+}
+
+<h2>Address</h2>
+
+<div class="card shadow-sm p-4">
+
+    <h4 class="text-primary mb-3">Address Form</h4>
+
+    <form  method="post">
+
+        <div class="mb-3">
+            <label class="form-label">House Number</label>
+            <input type="number" name="housenumber"
+                   class="form-control"
+                   placeholder="Enter house number" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Street</label>
+            <input type="text" name="street"
+                   class="form-control"
+                   placeholder="Enter street name" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <input type="text" name="city"
+                   class="form-control"
+                   placeholder="Enter city" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">State</label>
+            <input type="text" name="state"
+                   class="form-control"
+                   placeholder="Enter state" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PIN Code</label>
+            <input type="text" name="pincode"
+                   class="form-control"
+                   placeholder="Enter 6-digit PIN code"
+                   maxlength="6"
+                   pattern="[0-9]{6}" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+
+    </form>
+
+</div>

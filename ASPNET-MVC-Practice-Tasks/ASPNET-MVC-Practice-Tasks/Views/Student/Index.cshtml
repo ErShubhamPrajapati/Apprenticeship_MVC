@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*Question 3*@
+@{
+    string[] Student = { "Shubham", "Rahul", "Amit", "Priya", "Rohit", "Neha", "Ankit", "Pooja", "Vikas", "Anshika" };
+    <h2>Student Details</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+    </tr>
+    @for(int i=0; i < Student.Length; i++)
+            {
+                <tr>
+                    <th>@(i+1)</th>
+                    <th>@Student[i]</th>
+                </tr>
+            }
+
+</table>
+}
+

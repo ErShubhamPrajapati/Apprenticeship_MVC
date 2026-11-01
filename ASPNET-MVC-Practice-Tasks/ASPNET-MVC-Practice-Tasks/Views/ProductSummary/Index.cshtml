@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    int[] ProductID = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    string[] Name = { "Laptop", "Mobile", "Keyboard", "Mouse", "Monitor", "Printer", "Headphone", "Tablet", "Speaker", "Webcam" };
+    int[] Price = { 50000, 25000, 1500, 800, 12000, 7000, 2000, 18000, 3000, 2500 };
+    int[] Stock = { 10, 20, 0, 15, 8, 0, 25, 5, 12, 0 };
+
+    int TotalProducts = ProductID.Length;
+    int TotalStock = Stock.Sum();
+    int Expensive = Price.Max();
+    int OutOfStock = Stock.Count(s => s == 0);
+
+    <div class="container mt-4">
+
+        <h2 class="text-center mb-4">Product Details</h2>
+
+        <!-- Product Table -->
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped table-hover">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Stock Quantity</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @for (int i = 0; i < ProductID.Length; i++)
+                    {
+                        <tr>
+                            <td>@ProductID[i]</td>
+                            <td>@Name[i]</td>
+                            <td>₹@Price[i]</td>
+
+                            <td>
+                                @if (Stock[i] == 0)
+                                {
+                                    <span class="text-danger">Out of Stock</span>
+                                }
+                                else
+                                {
+                                    @Stock[i]
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Summary -->
+        <h2 class="text-center mt-5 mb-4">Product Summary</h2>
+
+        <div class="row">
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5>Total Products</h5>
+                        <h3>@TotalProducts</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5>Total Available Stock</h5>
+                        <h3>@TotalStock</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5>Most expensive product </h5>
+                        <h3>@Expensive</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5>OutOfStock Product </h5>
+                        <h3>@OutOfStock</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+}

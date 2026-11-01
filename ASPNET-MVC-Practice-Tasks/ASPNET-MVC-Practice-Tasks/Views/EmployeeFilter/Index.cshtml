@@ -1,0 +1,29 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string[] Name = { "Shubham", "Rahul", "Amit", "Priya", "Rohit", "Neha", "Ankit", "Pooja" };
+    int[] Salary = { 25000, 35000, 45000, 28000, 50000, 30000, 40000, 32000 };
+    <h2>Employee Salary Filter</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Employee Name</th>
+            <th>Salary</th>
+        </tr>
+
+        @for (int i = 0; i < Name.Length; i++)
+        {
+            if (Salary[i] > 30000)
+            {
+                <tr>
+                    <td>@Name[i]</td>
+                    <td>₹@Salary[i]</td>
+                </tr>
+            }
+        }
+    </table>
+}
+

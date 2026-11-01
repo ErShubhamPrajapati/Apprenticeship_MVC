@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@*Question 1*@
+
+
+@{
+    string[] fruit = { "Apple", "Banana", "Mango", "Orange", "Grapes", "Papaya", "Guava" };
+    <h2>List of Fruits</h2>
+    <ul>
+        @foreach (string a in fruit)
+        {
+        <li>@a</li>
+        }
+    </ul>
+   
+}
+
+

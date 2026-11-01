@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@*Question 2*@
+@{
+    string[] state = { "Uttar Pradesh", "Maharashtra", "Rajasthan", "Gujarat", "Bihar", "Madhya Pradesh", };
+    <h2>Select an Indian State</h2>
+    <select name="state">
+        <option value="">-- Select State --</option>
+        @foreach (string b in state)
+        {
+            <option>@b</option>
+
+        }
+    </select>
+}
+

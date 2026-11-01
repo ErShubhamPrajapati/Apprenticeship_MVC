@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string[] Name = { "Rahul", "Amit", "Priya", "Neha", "Rohit", "Pooja", "Ankit", "Sneha", "Vikas", "Kiran" };
+    int[] Marks = { 95, 78, 65, 52, 40, 30, 88, 60, 45, 33 };
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Student Grade Report</h2>
+        <table class="table table-bordered ">
+            <thead class="table-dark">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(int i = 0; i < Name.Length; i++)
+            {
+                <tr>
+                    <td>@Name[i]</td>
+                    <td>@Marks[i]</td>
+                    <td>
+                        @if (Marks[i] >= 80)
+                        {
+                            <span>Grade A</span>
+                        }
+                        else if (Marks[i] >= 60)
+                        {
+                            <span>Grade B</span>
+                        }
+                        else if (Marks[i] >= 45)
+                        {
+                            <span>Grade C</span>
+                        }
+                        else if (Marks[i] >= 33)
+                        {
+                            <span>Grade D</span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">Fail</span>
+                        }
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+

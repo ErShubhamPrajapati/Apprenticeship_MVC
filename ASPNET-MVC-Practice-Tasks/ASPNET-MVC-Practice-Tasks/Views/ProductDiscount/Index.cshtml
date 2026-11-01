@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string[] Name = { "Laptop", "Mobile", "Keyboard", "Mouse", "Monitor", "Printer", "Headphone", "Tablet" };
+
+    int[] Price = { 50000, 25000, 1500, 800, 12000, 7000, 2000, 18000 };
+
+    <div class="container mt-4">
+
+        <h2 class="text-center mb-4">Product Discount Details</h2>
+
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Original Price</th>
+                    <th>Discount Amount</th>
+                    <th>Final Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Name.Length; i++)
+                {
+                    double discount;
+
+
+                    if (Price[i] > 5000)
+                    {
+                        discount = Price[i] * 0.10;
+                    }
+                    else
+                    {
+                        discount = Price[i] * 0.05;
+                    }
+                    double FinalPrice = Price[i] - discount;
+                    <tr>
+                        <td>@(i+1)</td>
+                        <td>@Name[i]</td>
+                        <td>@Price[i]</td>
+                        <td>@discount</td>
+                        <td>@FinalPrice</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+            </div>
+
+     }

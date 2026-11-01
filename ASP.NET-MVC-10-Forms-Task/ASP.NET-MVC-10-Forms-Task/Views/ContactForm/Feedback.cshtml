@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_AllLayoutPage.cshtml";
+}
+
+
+<div class="card shadow-sm p-4">
+
+    <h4 class="text-primary mb-3">Feedback Form</h4>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Customer Name</label>
+            <input type="text" name="customername"
+                   class="form-control"
+                   placeholder="Enter customer name" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email ID</label>
+            <input type="email" name="email"
+                   class="form-control"
+                   placeholder="Enter email address" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Rating</label>
+            <select name="rating" class="form-select" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Service Type</label>
+            <select name="servicetype" class="form-select" required>
+                <option value="">Select Service</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Customer Support">Customer Support</option>
+                <option value="Online Service">Online Service</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Comments</label>
+            <textarea name="comments"
+                      class="form-control"
+                      rows="3"
+                      placeholder="Write your feedback..."
+                      required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Submit Feedback
+        </button>
+
+    </form>
+
+</div>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    string[] fruit = { "Apple", "orange", "banana", "grapes" };
+    <ul>
+        @foreach(string a in fruit)
+        {
+        <li>@a</li>
+        }
+    </ul>}
+
+@*wap to create an array for collection of states and show all state name in DDL*@
+
+<h5>Select State : </h5>
+@{
+
+    string[] state = {"Up","Bihar","Mp","Gujrat","Delhi"};
+    <select >
+        @foreach(string b in state)
+            {
+             <option>@b</option>
+            }
+    </select>
+
+}
