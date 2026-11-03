@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_CollegeLayoutPage.cshtml";
+}
+
+
+<h2>Dashboard</h2>
+Welcome , your college name : @Session["name"]
+<br />
+And Your your college code : @Session["code"]
+<br />
+Email is : @Session["email"]
+<br />
+Mobile no is : @Session["mobile"]
+<br />
+and Your Address  : @Session["address"]
+<br/>
+
+@{
+    HttpCookie cookie = Request.Cookies.Get("name");
+    @cookie.Value
+}

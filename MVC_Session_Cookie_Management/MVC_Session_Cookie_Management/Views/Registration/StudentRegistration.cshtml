@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "StudentRegistration";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow-sm p-4">
+
+        <h3 class="text-primary mb-3">Student Registration</h3>
+
+        <form  method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Student Name</label>
+                <input type="text"
+                       name="name"
+                       class="form-control"
+                       placeholder="Enter student name"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Father Name</label>
+                <input type="text"
+                       name="fname"
+                       class="form-control"
+                       placeholder="Enter father name"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Enter email"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Mobile Number</label>
+                <input type="tel"
+                       name="mobile"
+                       class="form-control"
+                       placeholder="Enter mobile number"
+                       maxlength="10"
+                       pattern="[0-9]{10}"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Course</label>
+                <select name="course"
+                        class="form-select"
+                        required>
+
+                    <option value="">Select Course</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="B.Sc">B.Sc</option>
+
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

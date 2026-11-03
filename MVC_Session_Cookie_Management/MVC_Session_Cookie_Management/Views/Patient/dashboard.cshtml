@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "dashboard";
+    Layout = "~/Views/Shared/_PatientLayoutPage.cshtml";
+}
+
+<h2>dashboard</h2>
+
+<h2>Patient Dashboard</h2>
+
+Welcome, @Session["name"]
+<br />
+
+Your Age is : @Session["age"]
+<br />
+
+Your Gender is : @Session["gender"]
+<br />
+
+Mobile No is : @Session["mobile"]
+<br />
+
+Your Address is : @Session["address"]
+<br />
+
+@{
+    HttpCookie cookie = Request.Cookies.Get("name");
+}
+
+@if (cookie != null)
+{
+    <p>Cookie Name : @cookie.Value</p>
+}

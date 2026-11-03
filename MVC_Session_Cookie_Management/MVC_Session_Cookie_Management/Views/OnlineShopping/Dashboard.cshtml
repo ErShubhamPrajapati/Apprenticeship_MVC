@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_OnlineShoppingLayoutPage.cshtml";
+}
+
+<h2>Dashboard</h2>
+
+Welcome, @Session["name"]
+<br />
+
+Your Email is : @Session["email"]
+<br />
+
+Product Name : @Session["product"]
+<br />
+
+Quantity : @Session["quantity"]
+<br />
+
+Delivery Address : @Session["address"]
+<br />
+
+@{
+    HttpCookie cookie = Request.Cookies.Get("name");
+}
+
+@if (cookie != null)
+{
+    <p>Cookie Name : @cookie.Value</p>
+}

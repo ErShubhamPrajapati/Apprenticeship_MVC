@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_EmployeeLayoutPage.cshtml";
+}
+
+<h2>Dashboard</h2>
+
+Welcome , @Session["name"]
+<br />
+Your email is : @Session["email"]
+<br />
+Mobile number is : @Session["mobile"]
+<br />
+Department is : @Session["department"]
+<br />
+and  your salary is : @Session["salary"]
+<br/>
+
+@{
+    HttpCookie cookie = Request.Cookies.Get("name");
+    @cookie.Value
+}

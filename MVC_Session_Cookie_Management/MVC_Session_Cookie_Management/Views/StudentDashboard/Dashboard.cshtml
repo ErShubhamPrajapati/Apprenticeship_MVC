@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_StudentLayoutPage.cshtml";
+}
+
+<h2>Dashboard</h2>
+Welcome ,@Session["name"]<br/>
+And Your Farher name is : @Session["fname"]<br/>
+Email is : @Session["email"]<br/>
+Mobile no is : @Session["mobile"]<br/>
+and Your Course is  : @Session["course"]
+
+
+@{ 
+    HttpCookie cookie = Request.Cookies.Get("name");
+    @cookie.Value
+}
